@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "HOPE-Redirector",
+  "version": "1.1",
+  "description": "Redirects my course page of HOPE to Dashboard of HOPE",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://hope.fun.ac.jp/*"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "icons/icon_16.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{13a41eca-c849-4bec-941e-a6fc8ca7e16d}"
+    }
+  }
+}
